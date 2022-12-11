@@ -18,6 +18,8 @@
     "linter"
   ],
   "devDependencies": {
+    "@microsoft/eslint-formatter-sarif": "^3.0.0",
+    "@microsoft/jest-sarif": "^1.0.0-beta.0",
     "@types/node": "^18.11.13",
     "@typescript-eslint/eslint-plugin": ">=5.43.0",
     "@typescript-eslint/parser": ">=5.43.0",
@@ -35,5 +37,9 @@
     "lint:ci": "yarn xo --reporter junit",
     "test": "yarn jest",
     "test:ci": "yarn jest --reporters='jest-junit'"
+  },
+  "dependencies": {
+    "node-sarif-builder": "^2.0.3",
+    "xsd-schema-validator": "^0.7.0"
   }
 }
