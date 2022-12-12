@@ -16,6 +16,26 @@ Conditions of satisfaction:
 3. SARIF file reporting for use with continuous integration (CI) environments.
 4. GitHub Action job.
 
+## Development Goals
+
+With status as of version 0.0.1:
+
+1. Command line utility with help. :heavy_check_mark:
+2. Validate a single file. :heavy_check_mark:
+3. ... or, an entire directory. :x:
+4. Auto-detect XSD from XML file's declaration. :x:
+5. Readable console output. :wavy_dash:
+6. Output in SARIF format. :x:
+7. ... and possibly in junit XML. :x:
+8. GitHub Actions automation. :x:
+9. Publish to npmjs. :x:
+
+## Usage
+
+```bash
+yarn start --help
+```
+
 ## License
 
 Copyright (c) 2022, Stephen A. Fuqua. Freely available under terms of the [MIT
