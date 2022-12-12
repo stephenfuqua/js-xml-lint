@@ -51,8 +51,7 @@ export function initializeLogging(): void {
 
 export const Logger = {
   fatal: (message: string, err?: any | null) => {
-    logger.error({ message, err });
-    process.exit(1);
+    logger.error({ message: `💥 ${message}`, err });
   },
   error: (message: string, err?: any | null) => {
     logger.error({ message, err });

@@ -16,7 +16,7 @@ function parseArguments(argv: string[]): Arguments {
   return { xmlFile: x, xsdFile: s };
 }
 
-function throwErrorIfFileDoesNotExist(filePath: string): void {
+function confirmFileExists(filePath: string): void {
   if (!existsSync(filePath)) {
     Logger.fatal(`File does not exist or cannot be read: '${filePath}`);
   }
@@ -24,10 +24,10 @@ function throwErrorIfFileDoesNotExist(filePath: string): void {
 
 export function getCommand(argv: string[]): Arguments {
   const args = parseArguments(argv);
-  throwErrorIfFileDoesNotExist(args.xmlFile);
+  confirmFileExists(args.xmlFile);
 
   if (args.xsdFile) {
-    throwErrorIfFileDoesNotExist(args.xsdFile);
+    confirmFileExists(args.xsdFile);
   }
 
   return args;

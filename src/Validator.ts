@@ -3,14 +3,6 @@ import { XMLValidator } from 'fast-xml-parser';
 import { readFileSync } from 'fs';
 import { Logger } from './Logger';
 
-// function createTemporaryWithoutBom(file: string): string {
-//   // TODO: for now, assuming UTF-8 encoding
-//   const fileContents = readFileSync(file, { encoding: 'utf-8' });
-
-//   const tempName = file.temp
-
-// }
-
 function parseOnly(xmlFile: string): void {
   // TODO: for now, assuming UTF-8 encoding
   const fileContents = readFileSync(xmlFile, { encoding: 'utf-8' });
@@ -28,6 +20,8 @@ function parseOnly(xmlFile: string): void {
 
 export function validateWithXsd(xmlFile: string, xsdFile: string): void {
   validator.validateXML(xmlFile, xsdFile, (err, result) => {
+    console.warn(err, result);
+
     if (err) {
       Logger.fatal('Schema validation failed:', result || err);
     }
@@ -36,7 +30,7 @@ export function validateWithXsd(xmlFile: string, xsdFile: string): void {
   });
 }
 
-export function validateFile(xmlFile: string, xsdFile: string | undefined): void {
+export function validateFile(xmlFile: string, xsdFile?: string | undefined): void {
   parseOnly(xmlFile);
 
   if (xsdFile) {

@@ -1,5 +1,5 @@
 import { validateFile } from './Validator';
-import { getCommand } from './ClI';
+import { getCommand } from './CLI';
 import { initializeLogging } from './Logger';
 
 initializeLogging();
