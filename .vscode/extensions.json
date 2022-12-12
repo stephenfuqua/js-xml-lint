@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "streetsidesoftware.code-spell-checker",
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "davidanson.vscode-markdownlint",
+    "stkb.rewrap",
+    "bierner.markdown-emoji",
+    "Orta.vscode-jest",
+    "ms-sarifvscode.sarif-viewer"
+  ]
+}
