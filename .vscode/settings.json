@@ -23,5 +23,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true
     },
-    "sarif-viewer.connectToGithubCodeScanning": "off"
+    "sarif-viewer.connectToGithubCodeScanning": "off",
+    "git.ignoreLimitWarning": true,
+    "jest.autoRun": {}
 }
